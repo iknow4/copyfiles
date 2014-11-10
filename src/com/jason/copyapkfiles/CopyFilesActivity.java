@@ -24,6 +24,7 @@ public class CopyFilesActivity extends Activity {
 	//static final String COPY_FILES_PATH = "/storage/sdcard0/apkfiles";
 	/*PATH*/
 	static final String from_files = "/mnt/sda/sda1/jason";
+	@SuppressLint("SdCardPath") 
 	static final String to_files = "/mnt/sdcard/apkfiles";
 	static private final int COPY_START = 100;
 	static private final int COPY_COMPLETE = 101;
