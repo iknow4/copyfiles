@@ -72,7 +72,6 @@ public class CopyFilesActivity extends Activity {
 
 					@Override
 					public void run() {
-						// TODO Auto-generated method stub
 						try{
 							copyFolder(from_files,to_files);
 							MyDialog.cancel();
