@@ -3,7 +3,6 @@ package com.jason.copyapkfiles;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -35,10 +34,10 @@ public class CopyFilesActivity extends Activity {
 	File sdDir = null;
 	File copyFileDir = null;
 	
+	@SuppressLint("HandlerLeak") 
 	private class Myhandler extends Handler{
 		@Override
 		public void handleMessage(Message msg) {
-			// TODO Auto-generated method stub
 			switch(msg.what){
 				case COPY_START:
 					///TODO:
@@ -54,7 +53,6 @@ public class CopyFilesActivity extends Activity {
 	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.copy_files);
@@ -63,7 +61,6 @@ public class CopyFilesActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 			
 			if(isSdcardMount)
 			{	
@@ -97,7 +94,6 @@ public class CopyFilesActivity extends Activity {
 	
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		isSdcardMount = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
 		sdDir = Environment.getExternalStorageDirectory();
@@ -112,7 +108,6 @@ public class CopyFilesActivity extends Activity {
 
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
 
